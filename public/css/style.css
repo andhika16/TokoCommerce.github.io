@@ -1,0 +1,28 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+header > .topbar  {
+    background-color: #393e46;
+    color: #fff;
+    
+}
+
+header > .topbar > .container-fluid > p {
+    margin: 0px;
+}
+.container-fluid  {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+header > .topbar {
+    padding: 5px;
+}
+button > .navbar-toggler {
+    border: none;
+}
+
+
+
+
