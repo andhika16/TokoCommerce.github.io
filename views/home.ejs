@@ -1,7 +1,41 @@
-<%- include('partials/header') %> 
-<div class="container-fluid">
-    <h1>Hallo</h1>
+<%- include('partials/header') %>
+<div class="section-top pt-4 pb-5">
+    <div class="container pt-2 pb-3 pt-lg-3 pb-lg-4">
+        <div class="order-lg-2 mb-3 mb-lg-0 pt-lg-2 d-flex">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb-light flex-lg-nowrap justify-content-center justify-content-lg-start">
+                    <li class="breadcrumb-item"><a class="text-nowrap" href="index.html"><i class="ci-home"></i>Home</a>
+                    </li>
+                    <li class="breadcrumb-item text-nowrap"><a href="#">Shop</a>
+                    </li>
+                    <li class="breadcrumb-item text-nowrap active" aria-current="page">Grid filters on top</li>
+                </ol>
+            </nav>
+        </div>
+        <div class="order-lg-1 pe-lg-4 text-center text-lg-start">
+            <h1 class="h3 mb-0"> Selamat Belanja </h1>
+        </div>
+
+    </div>
 </div>
 
-<%- include('partials/footer') %> 
-
+<section class="product-home">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <% theData.forEach(data => { %>
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="img-warp d-flex justify-content-center">
+                        <img src="<%= data.image %> " class="card-img-top m-auto" alt="..." >
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title"><%= data.title %></h5>
+                        <p class="card-text"><span><%= data.category %></span></p>
+                        <p class="card-text">Price <span><%= data.price %></span></p>
+                    </div>
+                </div>
+            </div>
+            <% }); %> 
+    </div>
+</section>
+<%- include('partials/footer') %>

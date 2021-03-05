@@ -1,0 +1,67 @@
+<%- include('partials/header')  %>
+<div class="container">
+    <section class="section-intro">
+        <div class="intro-banner-wrap">
+            <img src="img/1.jpg" alt="banner" width="" class="w-100 img-fluid">
+        </div>
+    </section>
+    <section class="section-specials border-bottom">
+        <div class="row">
+            <div class="col-md-4">
+                <figure class="itemside d-flex">
+                    <div class="aside">
+                        <img src="https://img.icons8.com/fluent-systems-regular/24/000000/bonds.png" width="70px" />
+                    </div>
+                    <figcaption class="info">
+                        <h6 class="card-title">Success card title</h6>
+                        <p class="fs-6">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam, cum.</p>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="col-md-4">
+                <figure class="itemside d-flex">
+                    <div class="aside">
+                        <img src="https://img.icons8.com/fluent-systems-regular/24/000000/bonds.png" width="70px" />
+                    </div>
+                    <figcaption class="info">
+                        <h6 class="card-title">Success card title</h6>
+                        <p class="fs-6">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam, cum.</p>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="col-md-4">
+                <figure class="itemside d-flex">
+                    <div class="aside">
+                        <img src="https://img.icons8.com/fluent-systems-regular/24/000000/bonds.png" width="70px" />
+                    </div>
+                    <figcaption class="info">
+                        <h6 class="card-title">Success card title</h6>
+                        <p class="fs-6">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam, cum.</p>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+    <section class="product-sections">
+        <div class="row mt-3">
+            <% theData.forEach(data => { %>
+            <div class="col-sm-4 mb-3">
+                <div class="card">
+                    <div class="img-warp d-flex justify-content-center">
+                        <img src="<%= data.image %>" class="card-img-top" alt="...">
+                    </div>
+                    <div class="card-body">
+                        <figcaption class="text-center">
+                            <h5 class="card-title text-truncate"><%= data.title %> </h5>
+                            <p class="card-text"><span class="text-bold">Category</span> <span class="justify-content-end"> <%= data.category %></span></p>
+                            <p class="card-text lh-1 fw-light text-truncate"> <%= data.description %></p>
+                            <p class="card-text">$<%= data.price %></p>
+                        </figcaption>
+                    </div>
+                </div>
+            </div>
+            <% }); %>
+        </div>
+    </section>
+</div>
+<%- include('partials/footer')  %>
