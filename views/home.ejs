@@ -1,287 +1,170 @@
 <%- include('partials/header') %>
 <div class="bg-dark pt-4 pb-5">
-    <div class="container pt-2 pb-3 pt-lg-3 pb-lg-4">
-        <div class="d-lg-flex justify-content-lg-between">
-            <div class="order-lg-2 mb-3 mb-lg-0 pt-lg-2">
-                <nav aria-label="breadcrumb">
-                    <ol
-                        class="breadcrumb breadcrumb-light flex-lg-nowrap justify-content-center justify-content-lg-start">
-                        <li class="breadcrumb-item"><a class="text-nowrap" href="index.html"><i
-                                    class="ci-home"></i>Home</a>
-                        </li>
-                        <li class="breadcrumb-item text-nowrap"><a href="#">Shop</a>
-                        </li>
-                        <li class="breadcrumb-item text-nowrap active" aria-current="page">Grid filters on top</li>
-                    </ol>
-                </nav>
-            </div>
-            <div class="order-lg-1 pe-lg-4 text-center text-lg-start ">
-                <h1 class="h3 text-light mb-0"> Selamat Belanja </h1>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="container pb-5 mb-2 mb-md-4">
-    <div class="bg-light shadow-lg rounded-3  p-4 mb-4">
-        <div class="d-flex justify-content-between align-items-center">
-            <div class="dropdown me-2">
-                <a class="btn btn-outline-secondary dropdown-toggle" href="#shop-filters" data-bs-toggle="collapse"
-                    aria-expanded="true">Filters</a>
-            </div>
-            <div class="d-flex">
-                <a href="">
-                    <i class="fas fa-angle-left me-3"></i>
-                </a>
-                <a href="" class="nav-link-style">
-                    <span class="fs-md">1 / 5</span>
-                </a>
-                <a href="">
-                    <i class="fas fa-angle-right ms-3"></i>
-                </a>
-            </div>
-            <div class="d-none d-lg-flex">
-                <a href="#"><i class="fas fa-border-all"></i></a>
-                <a href="#" class=""><i class="far fa-grip-vertical"></i></a>
-            </div>
-        </div>
-        <!-- TOOlBAR EXPAND -->
-        <div class="collapse show" id="shop-filters">
-            <div class="row pt-4">
-                <div class="col-lg-4 col-sm-6">
-                    <!-- categories -->
-                    <div class="card mb-grid-gutter">
-                        <div class="card-body px-4">
-                            <div class="widget widget-categories">
-                                <h5 class="widget-titles">Categories</h5>
-                                <div class="accordion mt-n1">
-                                    <div class="accordion-item">
-                                        <h6 class="accordion-header">
-                                            <a href=""></a>
-                                        </h6>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <!-- categories -->
-                    <div class="card mb-grid-gutter">
-                        <div class="card-body px-4">
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <!-- categories -->
-                    <div class="card mb-grid-gutter">
-                        <div class="card-body px-4">
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-    <div class="row row-cols-1 row-cols-sm-2 g-4 mb-2">
-        <% theData.forEach(data => { %>
-        <div class="col-md-3 col-sm-4">
-            <div class="card">
-                <div class="img-warp d-flex justify-content-center">
-                    <img src="<%= data.image %> " class="card-img-top img-thumbnail" alt="...">
-                </div>
-                <figcaption>
-
-                </figcaption>
-                <div class="card-body">
-                    <h5 class="card-title text-truncate"><%= data.title %></h5>
-                    <p class="card-text"><span><%= data.category %></span></p>
-                    <p class="card-text">Price <span><%= data.price %></span></p>
-                </div>
-            </div>
-        </div>
-        <% }); %>
-    </div>
-    <div class="row py-sm-4">
-        <div class="col-md-8">
-            <div class="d-sm-flex justify-content-between align-items-center bg-secondary overflow-hidden rounded-3">
-
-                <h1>First Banner</h1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel placeat aperiam debitis facere
-                    inventore,
-                    quod accusantium dolore vero ex maiores maxime, minus odit fugit quisquam dolores! Quas architecto
-                    distinctio esse, cumque aliquam in qui fuga rerum! Tempora nihil ab iure, laboriosam aliquam rem,
-                    repellat ipsam molestiae commodi iste praesentium assumenda.</p>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="d-flex flex-column h-100 bg-size-cover bg-secondary bg-position-center rounded-3">
-                <h1>Second banner</h1>
-                <p class="text-wrap">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit aut ipsam
-                    aliquam cum neque quod
-                    sint ut? Esse ipsum quo error culpa amet, nam odit?</p>
-            </div>
-        </div>
-    </div>
-    <div class="row row-cols-1 row-cols-sm-2 g-4 mb-2">
-        <% theData.forEach(data => { %>
-        <div class="col-md-3 col-sm-4">
-            <div class="card">
-                <div class="img-warp d-flex justify-content-center">
-                    <img src="<%= data.image %> " class="card-img-top img-thumbnail" alt="...">
-                </div>
-                <figcaption>
-
-                </figcaption>
-                <div class="card-body">
-                    <h5 class="card-title text-truncate"><%= data.title %></h5>
-                    <p class="card-text"><span><%= data.category %></span></p>
-                    <p class="card-text">Price <span><%= data.price %></span></p>
-                </div>
-            </div>
-        </div>
-        <% }); %>
-    </div>
-    <hr class="my-3">
-</div>
-<footer class="bg-dark pt-5">
-<div class="container">
-    <div class="row pb-2">
-        <div class="col-md-4 col-sm-6">
-            <div class="widget widget-links widget-light pb-2 mb-4">
-                <h3 class="widget-title text-light">Shop departments</h3>
-                <ul class="widget-list">
-                  <li class="widget-list-item"><a class="widget-list-link" href="#">Sneakers &amp; Athletic</a></li>
-                  <li class="widget-list-item"><a class="widget-list-link" href="#">Athletic Apparel</a></li>
-                  <li class="widget-list-item"><a class="widget-list-link" href="#">Sandals</a></li>
-                  <li class="widget-list-item"><a class="widget-list-link" href="#">Jeans</a></li>
-                  <li class="widget-list-item"><a class="widget-list-link" href="#">Shirts &amp; Tops</a></li>
-                  <li class="widget-list-item"><a class="widget-list-link" href="#">Shorts</a></li>
-                  <li class="widget-list-item"><a class="widget-list-link" href="#">T-Shirts</a></li>
-                  <li class="widget-list-item"><a class="widget-list-link" href="#">Swimwear</a></li>
-                  <li class="widget-list-item"><a class="widget-list-link" href="#">Clogs &amp; Mules</a></li>
-                  <li class="widget-list-item"><a class="widget-list-link" href="#">Bags &amp; Wallets</a></li>
-                  <li class="widget-list-item"><a class="widget-list-link" href="#">Accessories</a></li>
-                  <li class="widget-list-item"><a class="widget-list-link" href="#">Sunglasses &amp; Eyewear</a></li>
-                  <li class="widget-list-item"><a class="widget-list-link" href="#">Watches</a></li>
-                </ul>
-              </div>
-        </div>
-        <div class="col-md-4 col-sm-6">
-            <div class="widget widget-links widget-light pb-2 mb-4">
-                <h3 class="widget-title text-light">Account &amp; shipping info</h3>
-                <ul class="widget-list">
-                  <li class="widget-list-item"><a class="widget-list-link" href="#">Your account</a></li>
-                  <li class="widget-list-item"><a class="widget-list-link" href="#">Shipping rates &amp; policies</a></li>
-                  <li class="widget-list-item"><a class="widget-list-link" href="#">Refunds &amp; replacements</a></li>
-                  <li class="widget-list-item"><a class="widget-list-link" href="#">Order tracking</a></li>
-                  <li class="widget-list-item"><a class="widget-list-link" href="#">Delivery info</a></li>
-                  <li class="widget-list-item"><a class="widget-list-link" href="#">Taxes &amp; fees</a></li>
-                </ul>
-              </div>
-        </div>
-        <div class="col-md-4 ">
-            <div class="widget pb-2 mb-4">
-                <h3 class="widget-title text-light pb-1">Stay informed</h3>
-                <form class="subscription-form validate" action="https://studio.us12.list-manage.com/subscribe/post?u=c7103e2c981361a6639545bd5&amp;amp;id=29ca296126" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate="">
-                  <div class="input-group flex-nowrap"><i class="ci-mail position-absolute top-50 translate-middle-y text-muted fs-base ms-3"></i>
-                    <input class="form-control rounded-start" type="email" name="EMAIL" placeholder="Your email" required="">
-                    <button class="btn btn-primary" type="submit" name="subscribe">Subscribe*</button>
-                  </div>
-                  <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                  <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                    <input class="subscription-form-antispam" type="text" name="b_c7103e2c981361a6639545bd5_29ca296126" tabindex="-1">
-                  </div>
-                  <div class="form-text text-light opacity-50">*Subscribe to our newsletter to receive early discount offers, updates and new products info.</div>
-                  <div class="subscription-status"></div>
-                </form>
-              </div>
-              <div class="widget pb-2 mb-4">
-                <h3 class="widget-title text-light pb-1">Download our app</h3>
-                <div class="d-flex flex-wrap">
-                  <div class="me-2 mb-2"><a class="btn-market btn-apple" href="#" role="button"><span class="btn-market-subtitle">Download on the</span><span class="btn-market-title">App Store</span></a></div>
-                  <div class="mb-2"><a class="btn-market btn-google" href="#" role="button"><span class="btn-market-subtitle">Download on the</span><span class="btn-market-title">Google Play</span></a></div>
-                </div>
-              </div>
-        </div>
-    </div>
-</div>
-
-<div class="pt-5 bg-darker">
-    <div class="container">
-      <div class="row pb-3">
-        <div class="col-md-3 col-sm-6 mb-4">
-          <div class="d-flex"><i class="ci-rocket text-primary" style="font-size: 2.25rem;"></i>
-            <div class="ps-3">
-              <h6 class="fs-base text-light mb-1">Fast and free delivery</h6>
-              <p class="mb-0 fs-ms text-light opacity-50">Free delivery for all orders over $200</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 mb-4">
-          <div class="d-flex"><i class="ci-currency-exchange text-primary" style="font-size: 2.25rem;"></i>
-            <div class="ps-3">
-              <h6 class="fs-base text-light mb-1">Money back guarantee</h6>
-              <p class="mb-0 fs-ms text-light opacity-50">We return money within 30 days</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 mb-4">
-          <div class="d-flex"><i class="ci-support text-primary" style="font-size: 2.25rem;"></i>
-            <div class="ps-3">
-              <h6 class="fs-base text-light mb-1">24/7 customer support</h6>
-              <p class="mb-0 fs-ms text-light opacity-50">Friendly 24/7 customer support</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 mb-4">
-          <div class="d-flex"><i class="ci-card text-primary" style="font-size: 2.25rem;"></i>
-            <div class="ps-3">
-              <h6 class="fs-base text-light mb-1">Secure online payment</h6>
-              <p class="mb-0 fs-ms text-light opacity-50">We possess SSL / Secure сertificate</p>
-            </div>
-          </div>
-        </div>
+  <div class="container pt-2 pb-3 pt-lg-3 pb-lg-4">
+    <div class="d-lg-flex justify-content-lg-between">
+      <div class="order-lg-2 mb-3 mb-lg-0 pt-lg-2">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb breadcrumb-light flex-lg-nowrap justify-content-center justify-content-lg-start"
+            style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href=""> <%= title %>   </a></li>
+          </ol>
+        </nav>
+        </nav>
       </div>
-      <hr class="hr-light mb-5">
-      <div class="row pb-2">
-        <div class="col-md-6 text-center text-md-start mb-4">
-          <div class="text-nowrap mb-4"><a class="d-inline-block align-middle mt-n1 me-3" href="#"><img class="d-block" src="img/footer-logo-light.png" width="117" alt="Cartzilla"></a>
-            <div class="btn-group dropdown disable-autohide">
-              <button class="btn btn-outline-light border-light btn-sm dropdown-toggle px-2" type="button" data-bs-toggle="dropdown"><img class="me-2" src="img/flags/en.png" width="20" alt="English">Eng / $</button>
-              <ul class="dropdown-menu my-1">
-                <li class="dropdown-item">
-                  <select class="form-select form-select-sm">
-                    <option value="usd">$ USD</option>
-                    <option value="eur">€ EUR</option>
-                    <option value="ukp">£ UKP</option>
-                    <option value="jpy">¥ JPY</option>
-                  </select>
-                </li>
-                <li><a class="dropdown-item pb-1" href="#"><img class="me-2" src="img/flags/fr.png" width="20" alt="Français">Français</a></li>
-                <li><a class="dropdown-item pb-1" href="#"><img class="me-2" src="img/flags/de.png" width="20" alt="Deutsch">Deutsch</a></li>
-                <li><a class="dropdown-item" href="#"><img class="me-2" src="img/flags/it.png" width="20" alt="Italiano">Italiano</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="widget widget-links widget-light">
-            <ul class="widget-list d-flex flex-wrap justify-content-center justify-content-md-start">
-              <li class="widget-list-item me-4"><a class="widget-list-link" href="#">Outlets</a></li>
-              <li class="widget-list-item me-4"><a class="widget-list-link" href="#">Affiliates</a></li>
-              <li class="widget-list-item me-4"><a class="widget-list-link" href="#">Support</a></li>
-              <li class="widget-list-item me-4"><a class="widget-list-link" href="#">Privacy</a></li>
-              <li class="widget-list-item me-4"><a class="widget-list-link" href="#">Terms of use</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-6 text-center text-md-end mb-4">
-          <div class="mb-3"><a class="btn-social bs-light bs-twitter ms-2 mb-2" href="#"><i class="ci-twitter"></i></a><a class="btn-social bs-light bs-facebook ms-2 mb-2" href="#"><i class="ci-facebook"></i></a><a class="btn-social bs-light bs-instagram ms-2 mb-2" href="#"><i class="ci-instagram"></i></a><a class="btn-social bs-light bs-pinterest ms-2 mb-2" href="#"><i class="ci-pinterest"></i></a><a class="btn-social bs-light bs-youtube ms-2 mb-2" href="#"><i class="ci-youtube"></i></a></div><img class="d-inline-block" src="img/cards-alt.png" width="187" alt="Payment methods">
-        </div>
+      <div class="order-lg-1 pe-lg-4 text-center text-lg-start ">
+        <h2 class="text-light fw-bold mb-0"> Selamat Belanja </h1>
       </div>
-      <div class="pb-4 fs-xs text-light opacity-50 text-center text-md-start">© All rights reserved. Made by <a class="text-light" href="https://createx.studio/" target="_blank" rel="noopener">Createx Studio</a></div>
     </div>
   </div>
-</footer>
+</div>
+<div class="container pb-5 mb-2 mb-md-4">
+  <div class="bg-light shadow-lg rounded-3  p-4 mb-4">
+    <div class="d-flex justify-content-between align-items-center">
+      <div class="dropdown me-2">
+        <a class="btn btn-outline-secondary dropdown-toggle" href="#shop-filters" data-bs-toggle="collapse"
+          aria-expanded="true">Filters</a>
+      </div>
+      <div class="d-flex">
+        <a href="" class="nav-link-style me-3 text-decoration-none link-dark" >
+          <i class="icofont-caret-left icofont-2x"></i>
+        </a>
+
+        <h4 class="fs-4 link-dark">1 / 5</h4>
+
+        <a href="" class="nav-link-style ms-3 text-decoration-none link-dark" >
+          <i class="icofont-caret-right icofont-2x"></i>
+        </a>
+      </div>
+      <div class="d-none d-lg-flex">
+        <a href="#"><i class="fas fa-border-all"></i></a>
+        <a href="#" class=""><i class="far fa-grip-vertical"></i></a>
+      </div>
+    </div>
+    <!-- TOOlBAR EXPAND -->
+    <div class="collapse" id="shop-filters">
+      <div class="row pt-4">
+        <div class="col-lg-4 col-sm-6">
+          <!-- categories -->
+          <div class="card mb-grid-gutter">
+            <div class="card-body px-4">
+              <div class="widget widget-categories">
+                <h5 class="widget-titles">Categories</h5>
+                <div class="accordion mt-n1">
+                  <div class="accordion-item">
+                    <h6 class="accordion-header">
+                      <a href=""></a>
+                    </h6>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <!-- categories -->
+          <div class="card mb-grid-gutter">
+            <div class="card-body px-4">
+              <div class="widget widget-categories">
+                <h5 class="widget-titles">Categories</h5>
+                <div class="accordion mt-n1">
+                  <div class="accordion-item">
+                    <h6 class="accordion-header">
+                      <a href=""></a>
+                    </h6>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <!-- categories -->
+          <div class="card mb-grid-gutter">
+            <div class="card-body px-4">
+              <div class="widget widget-categories">
+                <h5 class="widget-titles">Brand</h5>
+                <div class="accordion mt-n1">
+                  <div class="accordion-item">
+                    <h6 class="accordion-header">
+                      <a href=""></a>
+                    </h6>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- FIRST CONTENT -->
+  <div class="row row-cols-1 row-cols-sm-2 g-4 mb-2">
+    <% theData.forEach(data => { %>
+    <div class="col-lg-3 col-md-4">
+      <div class="card border-0 shadow-sm">
+        <div class="img-warp d-flex justify-content-center border-0">
+          <img src="<%= data.image %> " class="card-img-top img-thumbnail border-0 alt=" ...">
+        </div>
+        <figcaption>
+
+        </figcaption>
+        <div class="card-body">
+          <h5 class="card-title text-truncate"><%= data.title %></h5>
+          <p class="card-text"><span><%= data.category %></span></p>
+          <p class="card-text">Price <span><%= data.price %></span></p>
+        </div>
+      </div>
+    </div>
+    <% }); %>
+  </div>
+  <!-- BANNER -->
+  <div class="row py-sm-2">
+    <div class="col-lg-8  mb-4">
+      <div class="d-sm-flex justify-content-between align-items-center bg-light overflow-hidden rounded-3">
+        <div class="py-4 my-2 my-md-0 py-md-5 px-4 ms-md-3 text-center text-sm-start">
+          <h4 class="fs-lg fw-light mb-2">Segera pesan barang terbatas</h4>
+          <h3 class="mb-3">Buat Nyaman Hari-harimu</h3>
+          <a href="" class="btn btn-primary btn-shadow btn-sm">Pesan Sekarang</a>
+        </div>
+        <img class="d-block ms-auto ml-auto" src="img/banner.jpg">
+      </div>
+    </div>
+    <div class="col-lg-4 mb-4">
+      <div class="d-flex flex-column h-100 bg-size-cover bg-position-center rounded-3 py-4"
+        style="background-color: #e4fbff;">
+        <div class="py-4 my-2 px-4 text-center">
+          <h5 class="mb-3">Your Banner Here</h5>
+          <p class="fs-sm text-muted">hurry Up you reserve more</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END BANNER -->
+  <div class="row row-cols-1 row-cols-sm-2 g-4 mb-2">
+    <% theData.forEach(data => { %>
+    <div class="col-lg-3 col-md-4">
+      <div class="card border-0 shadow-sm">
+        <div class="img-warp d-flex justify-content-center">
+          <img src="<%= data.image %> " class="card-img-top img-thumbnail border-0" alt="...">
+        </div>
+        <figcaption>
+
+        </figcaption>
+        <div class="card-body">
+          <h5 class="card-title text-truncate"><%= data.title %></h5>
+          <p class="card-text text-muted fs-6"><span><%= data.category %></span></p>
+          <p class="card-text">Price <span><%= data.price %></span></p>
+        </div>
+      </div>
+    </div>
+    <% }); %>
+  </div>
+  <hr class="my-3">
+</div>
 <%- include('partials/footer') %>
