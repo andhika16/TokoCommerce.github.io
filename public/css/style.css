@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300&display=swap');
 
 * body {
     margin: 0px;
     padding: 0px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Hind', sans-serif;
 }
 
 p,
@@ -14,12 +15,10 @@ h4,
 h6,
 h2,
 a {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Hind', sans-serif;
 }
 
-* a {
-    text-decoration: none;
-}
+
 
 /* Electronic Css */
 .bg-accent {
@@ -65,23 +64,34 @@ header>.topbar>.container>p {
 
 
 
-.container >.shadow-lg {
+.container>.shadow-lg {
     margin-top: -3rem;
-   
+
 }
 
-.container {
-    width : 100%;
+section>.container-fluid {
+    width: 100%;
     margin-left: auto;
-    margin-right :auto;
+    margin-right: auto;
 }
 
+section > * a {
+    text-decoration: none;
+    color: #373F50;
+}
 
-
+.section-specials {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
 .img-warp {
-    padding: 20px;
+    padding: 10px;
     margin: auto;
     height: auto;
+}
+
+.bg-faded-info {
+    background-color: #EFF8FF;
 }
 
 .img-warp>.img-thumbnail {
@@ -95,10 +105,7 @@ header>.topbar>.container>p {
 
 
 
-.section-specials {
-    padding-top: 40px;
-    padding-bottom: 40px;
-}
+
 
 figcaption>.card-title,
 .info {
@@ -143,6 +150,12 @@ footer>* .icofont-3x {
 
     color: #f5645a;
 }
+
+.widget-product-title > a {
+    font-weight: 10px;
+    color: #2b3445;
+}
+
 
 /* DESKTOP VERSIONS */
 @media(min-width: 992px) {

@@ -35,7 +35,7 @@ const productApi = async function (req, res) {
 }
 const homeApi = async function (req, res) {
     try {
-        const theData = await fakeStoreApi(8);
+        const theData = await fakeStoreApi();
         res.render('home', {
             title: 'Home',
             theData
@@ -59,10 +59,10 @@ const cartApi = async function (req, res) {
     }
 }
 
-const electronic = async function (req, res) {
-    console.log(req.params.category);
+const electronicApi = async function (req, res) {
     try {
-        const theData = await fakeStoreApi(undefined, 'electronics')
+        const response = await fetch(`https://fakestoreapi.com/products/category/electronics`);
+        const theData = await response.json();
         res.render('electronic', {
             title: 'electronic',
             theData
@@ -79,5 +79,5 @@ module.exports = {
     productApi,
     homeApi,
     cartApi,
-    electronic
+    electronicApi
 }
