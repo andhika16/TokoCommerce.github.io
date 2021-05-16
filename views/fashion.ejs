@@ -1,0 +1,29 @@
+<%- include('partials/header') %>
+
+<section class="mx-5 pt-5">
+    <div class="d-flex flex-wrap justify-content-between align-items-center pt-1 border-bottom pb-4 mb-4">
+        <h2 class="h3 mb-0 pt-3 me-2 fw-bold">Trending products</h2>
+        <div class="pt-3">
+            <a class="btn btn-outline-secondary" href="shop-grid-ls.html">More products
+                <i class="icofont-simple-right"></i>
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <% images.forEach(image => { %>
+        <div class="col-md-3 col-sm-4 col-6">
+            <a class="d-block bg-white shadow-sm rounded-3 py-3 py-sm-4 mb-3" href="#">
+                <img
+                    class="d-block mx-auto" src="img/fashion/<%= image %> " style="width: 150px;" alt="Brand">
+            </a>
+        </div>
+        <% });%>
+
+
+    </div>
+
+</section>
+
+
+
+<%- include('partials/footer') %>

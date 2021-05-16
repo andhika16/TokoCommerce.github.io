@@ -1,122 +1,52 @@
 <%- include('partials/header') %>
-<div class="bg-dark pt-4 pb-5">
-  <div class="container pt-2 pb-3 pt-lg-3 pb-lg-4">
-    <div class="d-lg-flex justify-content-lg-between">
-      <div class="order-lg-2 mb-3 mb-lg-0 pt-lg-2">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb breadcrumb-light flex-lg-nowrap justify-content-center justify-content-lg-start"
-            style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);">
-            <li class="breadcrumb-item"><a class="text-decoration-none" href="#">Home</a></li>
-            <li class="breadcrumb-item"><a class="text-decoration-none" href=""> <%= title %>   </a></li>
-          </ol>
-        </nav>
-        </nav>
-      </div>
-      <div class="order-lg-1 pe-lg-4 text-center text-lg-start ">
-        <h2 class="text-light fw-bold mb-0"> Selamat Belanja </h1>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-8 col-md-7 mt-1 bg-white shadow-sm p-4">
+      <h1> Cartzilla Diskon Besar besaran</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas sunt distinctio sint ab ipsa cumque
+        consequatur at cum voluptatibus ipsum dolores, itaque quasi cupiditate eum, voluptate a. Cum, soluta, minus
+        voluptatem eaque ex nesciunt alias quibusdam recusandae beatae magnam ipsum fuga sit perferendis laudantium
+        deleniti nam iusto ipsam nulla harum.</p>
+    </div>
+    <div class="col-lg-3 col-md-3 mt-1 ">
+      <div class="row row-cols-auto">
+        <div class="col bg-white shadow-sm p-2">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ducimus quasi aspernatur facere modi a
+            odit! Eligendi, placeat iure, saepe ad totam velit praesentium architecto vel molestias dolore porro
+            expedita.</p>
+        </div>
+        <div class="col bg-light text-dark shadow-sm p-2 mt-2">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias ducimus veniam, quo amet commodi
+            exercitationem vitae necessitatibus repudiandae ratione, facere dolores eum assumenda debitis nisi possimus
+            corporis laudantium, dolore repellat.</p>
+        </div>
       </div>
     </div>
   </div>
 </div>
-<div class="container pb-5 mb-2 mb-md-4">
-  <div class="bg-light shadow-lg rounded-3  p-4 mb-4">
-    <div class="d-flex justify-content-between align-items-center">
-      <div class="dropdown me-2">
-        <a class="btn btn-outline-secondary dropdown-toggle" href="#shop-filters" data-bs-toggle="collapse"
-          aria-expanded="true">Filters</a>
-      </div>
-      <div class="d-flex">
-        <a href="" class="nav-link-style me-3 text-decoration-none link-dark" >
-          <i class="icofont-caret-left icofont-2x"></i>
-        </a>
 
-        <h4 class="fs-4 link-dark">1 / 5</h4>
 
-        <a href="" class="nav-link-style ms-3 text-decoration-none link-dark" >
-          <i class="icofont-caret-right icofont-2x"></i>
-        </a>
-      </div>
-      <div class="d-none d-lg-flex">
-        <a href="#"><i class="fas fa-border-all"></i></a>
-        <a href="#" class=""><i class="far fa-grip-vertical"></i></a>
-      </div>
-    </div>
-    <!-- TOOlBAR EXPAND -->
-    <div class="collapse" id="shop-filters">
-      <div class="row pt-4">
-        <div class="col-lg-4 col-sm-6">
-          <!-- categories -->
-          <div class="card mb-grid-gutter">
-            <div class="card-body px-4">
-              <div class="widget widget-categories">
-                <h5 class="widget-titles">Categories</h5>
-                <div class="accordion mt-n1">
-                  <div class="accordion-item">
-                    <h6 class="accordion-header">
-                      <a href=""></a>
-                    </h6>
-                  </div>
+<div class="container pb-5 mb-2 mt-5 mb-md-4">
 
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6">
-          <!-- categories -->
-          <div class="card mb-grid-gutter">
-            <div class="card-body px-4">
-              <div class="widget widget-categories">
-                <h5 class="widget-titles">Categories</h5>
-                <div class="accordion mt-n1">
-                  <div class="accordion-item">
-                    <h6 class="accordion-header">
-                      <a href=""></a>
-                    </h6>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6">
-          <!-- categories -->
-          <div class="card mb-grid-gutter">
-            <div class="card-body px-4">
-              <div class="widget widget-categories">
-                <h5 class="widget-titles">Brand</h5>
-                <div class="accordion mt-n1">
-                  <div class="accordion-item">
-                    <h6 class="accordion-header">
-                      <a href=""></a>
-                    </h6>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
   <!-- FIRST CONTENT -->
   <div class="row row-cols-1 row-cols-sm-2 g-4 mb-2">
     <% theData.forEach(data => { %>
     <div class="col-lg-3 col-md-4">
-      <div class="card border-0 shadow-sm">
+      <div class="card border-0">
         <div class="img-warp d-flex justify-content-center border-0">
-          <img src="<%= data.image %> " class="card-img-top img-thumbnail border-0 alt=" ...">
+          <img src="<%= data.image %> " class="card-img-top img-thumbnail border-0" >
         </div>
-        <figcaption>
-
-        </figcaption>
         <div class="card-body">
-          <h5 class="card-title text-truncate"><%= data.title %></h5>
-          <p class="card-text"><span><%= data.category %></span></p>
-          <p class="card-text">Price <span><%= data.price %></span></p>
+          <p class="card-text text-muted mb-0 fw-bold"><span><%= data.category %></span></p>
+          <h3 class="card-title mt-0 text-truncate"><%= data.title %></h3>
+          <div class="d-flex justify-content-between">
+            <p class="card-text"><span class="fw-bold link-info">$<%= data.price %></span></p>
+            <div class="star-rating">
+              <% for(let i = 0; i < 5; i++) {%>
+              <i class="icofont-star link-warning"></i>
+              <% } %>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -146,10 +76,10 @@
     </div>
   </div>
   <!-- END BANNER -->
-  <div class="row row-cols-1 row-cols-sm-2 g-4 mb-2">
+  <div class="row  g-4 mb-2">
     <% theData.forEach(data => { %>
-    <div class="col-lg-3 col-md-4">
-      <div class="card border-0 shadow-sm">
+    <div class="col-lg-3 col-md-4 col-sm-4">
+      <div class="card ">
         <div class="img-warp d-flex justify-content-center">
           <img src="<%= data.image %> " class="card-img-top img-thumbnail border-0" alt="...">
         </div>
@@ -157,9 +87,16 @@
 
         </figcaption>
         <div class="card-body">
-          <h5 class="card-title text-truncate"><%= data.title %></h5>
-          <p class="card-text text-muted fs-6"><span><%= data.category %></span></p>
-          <p class="card-text">Price <span><%= data.price %></span></p>
+          <p class="card-text mb-0 text-muted fw-bold"><span><%= data.category %></span></p>
+          <h3 class="card-title text-truncate"><%= data.title %></h3>
+          <div class="d-flex justify-content-between">
+            <p class="card-text"><span class="fw-bold link-info">$<%= data.price %></span></p>
+            <div class="star-rating">
+              <% for(let i = 0; i < 5; i++) {%>
+              <i class="icofont-star link-warning"></i>
+              <% } %>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -167,4 +104,5 @@
   </div>
   <hr class="my-3">
 </div>
+
 <%- include('partials/footer') %>

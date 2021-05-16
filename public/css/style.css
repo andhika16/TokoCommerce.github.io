@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Hind:wght@300&display=swap');
 
-* body {
+* body,
+body {
     margin: 0px;
     padding: 0px;
     font-family: 'Hind', sans-serif;
+    background-color: #dce2e7;
 }
 
 p,
@@ -26,7 +28,7 @@ a {
 }
 
 
-/*  */
+/* Product Css */
 
 
 
@@ -45,6 +47,7 @@ header>.topbar,
 
 }
 
+.container,
 header>.container {
     margin-left: 45px;
     margin-right: 45px;
@@ -58,16 +61,12 @@ header>.topbar>.container>p {
     margin: 0px;
 }
 
+
 .hr-light {
     color: rgba(255, 255, 255, 0.829);
 }
 
 
-
-.container>.shadow-lg {
-    margin-top: -3rem;
-
-}
 
 section>.container-fluid {
     width: 100%;
@@ -75,7 +74,7 @@ section>.container-fluid {
     margin-right: auto;
 }
 
-section > * a {
+section>* a {
     text-decoration: none;
     color: #373F50;
 }
@@ -84,6 +83,7 @@ section > * a {
     padding-top: 40px;
     padding-bottom: 40px;
 }
+
 .img-warp {
     padding: 10px;
     margin: auto;
@@ -101,6 +101,15 @@ section > * a {
 
 .container-content {
     margin-top: -35px;
+}
+
+
+.category > .row > .col {
+    background-color: #EFF8FF;
+    color: #222831;
+    border: 2px #222831 solid;
+    padding: 1rem;
+    text-align: center;
 }
 
 
@@ -151,7 +160,7 @@ footer>* .icofont-3x {
     color: #f5645a;
 }
 
-.widget-product-title > a {
+.widget-product-title>a {
     font-weight: 10px;
     color: #2b3445;
 }

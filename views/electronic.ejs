@@ -1,5 +1,5 @@
 <%- include('partials/header') %>
-<section class="bg-accent py-4">
+<section class="bg-accent py-4 shadow-sm">
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators mb-5">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
@@ -79,16 +79,16 @@
 
 </section>
 <!-- section product -->
-<section class="container-fluid pt-5">
+<section class="mx-5 pt-5">
     <div class="d-flex flex-wrap justify-content-between align-items-center pt-1 border-bottom pb-4 mb-4">
-        <h2 class="h3 mb-0 pt-3 me-2">Trending products</h2>
+        <h2 class="h3 mb-0 pt-3 me-2 fw-bold">Trending products</h2>
         <div class="pt-3">
             <a class="btn btn-outline-secondary" href="shop-grid-ls.html">More products
                 <i class="icofont-simple-right"></i>
             </a>
         </div>
     </div>
-    <div class="row mx-n3">
+    <div class="row">
         <div class="row row-cols-1 row-cols-sm-2 g-4 mb-2">
             <% theData.forEach(data => { %>
             <div class="col-lg-3 col-md-4">
@@ -100,9 +100,16 @@
 
                     </figcaption>
                     <div class="card-body">
-                        <h5 class="card-title text-truncate"><%= data.title %></h5>
-                        <p class="card-text text-muted fs-6"><span><%= data.category %></span></p>
-                        <p class="card-text">Price <span>$<%= data.price %></span></p>
+                        <p class="card-text mb-0 text-muted fw-bold"><span><%= data.category %></span></p>
+                        <h3 class="card-title text-truncate"><%= data.title %></h3>
+                        <div class="d-flex justify-content-between">
+                            <p class="card-text"><span class="fw-bold link-info">$<%= data.price %></span></p>
+                            <div class="star-rating">
+                                <% for(let i = 0; i < 5; i++) {%>
+                                <i class="icofont-star link-warning"></i>
+                                <% } %>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -129,143 +136,127 @@
 </section>
 <section class="container-fluid justify-content-center mt-5 mb-5 mx-auto">
     <div class="container">
-        <div class="row">
-            <div class="col-sm-3 col-md-5 col-lg-3 border py-4 justify-content-center">
-                <img src="img/13.png" height="auto" width="250" alt="">
+        <div class="row row-cols-3">
+            <div class="col border py-4 justify-content-center">
+                <img src="img/13.png" class="img-fluid" alt="">
             </div>
-            <div class="col-sm-3 col-md-5 col-lg-3 border py-4">
-                <img src="img/15.png" height="auto" width="250" alt="">
+            <div class="col border py-4">
+                <img src="img/15.png" class="img-fluid" alt="">
             </div>
-            <div class="col-sm-3 col-md-5 col-lg-3 border py-4">
-                <img src="img/16.png" height="auto" width="250" alt="">
+            <div class="col border py-4">
+                <img src="img/16.png" class="img-fluid" alt="">
             </div>
-            <div class="col-sm-3 col-md-5 col-lg-3  border py-4">
-                <img src="img/18.png" height="auto" width="250" alt="">
+            <div class="col d-none d-lg-block border py-4">
+                <img src="img/18.png" class="img-fluid" alt="">
             </div>
         </div>
     </div>
 </section>
-<section class="container m-auto pb-4 pb-md-5">
+<section class="container-fluid m-auto pb-4 pb-md-5">
     <div class="row ">
         <!-- Bestsellers-->
         <div class="col-md-4 col-sm-6 mb-2">
             <div class="card border-0 shadow-sm">
                 <h3 class="widget-title text-center">Bestsellers</h3>
-          <div class=" d-flex align-items-center pb-2 border-bottom"><a class="d-block flex-shrink-0"
-                        href="shop-single-v2.html"><img src="img/suggest/05.jpg" width="64" alt="Product"></a>
+                <% img.forEach(image => { %>
+
+                <div class=" d-flex align-items-center pb-2 border-bottom"><a class="d-block flex-shrink-0"
+                        href="shop-single-v2.html"><img src="img/suggest/<%= image %> " width="64" alt="Product"></a>
                     <div class="ps-2">
                         <h6 class="widget-product-title"><a href="shop-single-v2.html">Wireless Bluetooth Headphones</a>
                         </h6>
                         <div class="widget-product-meta"><span class="text-accent">$259.<small>00</small></span></div>
                     </div>
-            </div>
-            <div class="d-flex align-items-center py-2 border-bottom"><a class="d-block flex-shrink-0"
-                    href="shop-single-v2.html"><img src="img/suggest/06.jpg" width="64" alt="Product"></a>
-                <div class="ps-2">
-                    <h6 class="widget-product-title"><a href="shop-single-v2.html">Cloud Security Camera</a></h6>
-                    <div class="widget-product-meta"><span class="text-accent">$122.<small>00</small></span></div>
                 </div>
+                <% }) %> 
+               
+                <a class="btn btn-outline-primary fs-sm" href="shop-grid-ls.html">View more<i
+                        class="icofont-simple-right"></i></a>
             </div>
-            <div class="d-flex align-items-center py-2 border-bottom"><a class="d-block flex-shrink-0"
-                    href="shop-single-v2.html"><img src="img/suggest/07.jpg" width="64" alt="Product"></a>
-                <div class="ps-2">
-                    <h6 class="widget-product-title"><a href="shop-single-v2.html">Android Smartphone S10</a></h6>
-                    <div class="widget-product-meta"><span class="text-accent">$799.<small>00</small></span></div>
-                </div>
-            </div>
-            <div class="d-flex align-items-center py-2"><a class="d-block flex-shrink-0" href="shop-single-v2.html"><img
-                        src="img/suggest/08.jpg" width="64" alt="Product"></a>
-                <div class="ps-2">
-                    <h6 class="widget-product-title"><a href="shop-single-v2.html">Android Smart TV Box</a></h6>
-                    <div class="widget-product-meta"><span class="text-accent">$67.<small>00</small></span>
-                        <del class="text-muted fs-xs">$90.<small>43</small></del>
-                    </div>
-                </div>
-            </div>
-            <a class="btn btn-outline-primary fs-sm" href="shop-grid-ls.html">View more<i
-                    class="icofont-simple-right"></i></a>
         </div>
-    </div>
-    <!-- New arrivals-->
-    <div class="col-md-4 col-sm-6 mb-2 py-3">
-        <div class="card border-0 shadow-sm">
-            <h3 class="widget-title text-center">New arrivals</h3>
-            <div class="d-flex align-items-center pb-2 border-bottom"><a class="d-block flex-shrink-0"
-                    href="shop-single-v2.html"><img src="img/suggest/06.jpg" width="64" alt="Product"></a>
-                <div class="ps-2">
-                    <h6 class="widget-product-title"><a href="shop-single-v2.html">Monoblock Desktop PC</a></h6>
-                    <div class="widget-product-meta"><span class="text-accent">$1,949.<small>00</small></span></div>
-                </div>
-            </div>
-            <div class="d-flex align-items-center py-2 border-bottom"><a class="d-block flex-shrink-0"
-                    href="shop-single-v2.html"><img src="img/suggest/07.jpg" width="64" alt="Product"></a>
-                <div class="ps-2">
-                    <h6 class="widget-product-title"><a href="shop-single-v2.html">Laserjet Printer All-in-One</a></h6>
-                    <div class="widget-product-meta"><span class="text-accent">$428.<small>60</small></span></div>
-                </div>
-            </div>
-            <div class="d-flex align-items-center py-2 border-bottom"><a class="d-block flex-shrink-0"
-                    href="shop-single-v2.html"><img src="img/suggest/08.jpg" width="64" alt="Product"></a>
-                <div class="ps-2">
-                    <h6 class="widget-product-title"><a href="shop-single-v2.html">Console Controller Charger</a></h6>
-                    <div class="widget-product-meta"><span class="text-accent">$14.<small>97</small></span>
-                        <del class="text-muted fs-xs">$16.<small>47</small></del>
+        <!-- New arrivals-->
+        <div class="col-md-4 col-sm-6 mb-2 py-3">
+            <div class="card border-0 shadow-sm">
+                <h3 class="widget-title text-center">New arrivals</h3>
+                <div class="d-flex align-items-center pb-2 border-bottom"><a class="d-block flex-shrink-0"
+                        href="shop-single-v2.html"><img src="img/suggest/06.jpg" width="64" alt="Product"></a>
+                    <div class="ps-2">
+                        <h6 class="widget-product-title"><a href="shop-single-v2.html">Monoblock Desktop PC</a></h6>
+                        <div class="widget-product-meta"><span class="text-accent">$1,949.<small>00</small></span></div>
                     </div>
                 </div>
-            </div>
-            <div class="d-flex align-items-center py-2"><a class="d-block flex-shrink-0" href="shop-single-v2.html"><img
-                        src="img/suggest/62.jpg" width="65" alt="Product"></a>
-                <div class="ps-2">
-                    <h6 class="widget-product-title"><a href="shop-single-v2.html">Smart Watch Series 5, Aluminium</a>
-                    </h6>
-                    <div class="widget-product-meta"><span class="text-accent">$349.<small>99</small></span></div>
+                <div class="d-flex align-items-center py-2 border-bottom"><a class="d-block flex-shrink-0"
+                        href="shop-single-v2.html"><img src="img/suggest/07.jpg" width="64" alt="Product"></a>
+                    <div class="ps-2">
+                        <h6 class="widget-product-title"><a href="shop-single-v2.html">Laserjet Printer All-in-One</a>
+                        </h6>
+                        <div class="widget-product-meta"><span class="text-accent">$428.<small>60</small></span></div>
+                    </div>
                 </div>
+                <div class="d-flex align-items-center py-2 border-bottom"><a class="d-block flex-shrink-0"
+                        href="shop-single-v2.html"><img src="img/suggest/08.jpg" width="64" alt="Product"></a>
+                    <div class="ps-2">
+                        <h6 class="widget-product-title"><a href="shop-single-v2.html">Console Controller Charger</a>
+                        </h6>
+                        <div class="widget-product-meta"><span class="text-accent">$14.<small>97</small></span>
+                            <del class="text-muted fs-xs">$16.<small>47</small></del>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center py-2"><a class="d-block flex-shrink-0"
+                        href="shop-single-v2.html"><img src="img/suggest/62.jpg" width="65" alt="Product"></a>
+                    <div class="ps-2">
+                        <h6 class="widget-product-title"><a href="shop-single-v2.html">Smart Watch Series 5,
+                                Aluminium</a>
+                        </h6>
+                        <div class="widget-product-meta"><span class="text-accent">$349.<small>99</small></span></div>
+                    </div>
+                </div>
+                <a class="btn btn-outline-primary fs-sm" href="shop-grid-ls.html">View more<i
+                        class="icofont-simple-right"></i></a>
             </div>
-            <a class="btn btn-outline-primary fs-sm" href="shop-grid-ls.html">View more<i
-                    class="icofont-simple-right"></i></a>
         </div>
-    </div>
-    <!-- Top rated-->
-    <div class="col-md-4 col-sm-6 mb-2 py-3">
-        <div class="card border-0 shadow-sm">
-            <h3 class="widget-title text-center">Top rated</h3>
-            <div class="d-flex align-items-center pb-2 border-bottom"><a class="d-block flex-shrink-0"
-                    href="shop-single-v2.html"><img src="img/suggest/10.jpg" width="64" alt="Product"></a>
-                <div class="ps-2">
-                    <h6 class="widget-product-title"><a href="shop-single-v2.html">Android Smartphone S9</a></h6>
-                    <div class="widget-product-meta"><span class="text-accent">$749.<small>99</small></span>
-                        <del class="text-muted fs-xs">$859.<small>99</small></del>
+        <!-- Top rated-->
+        <div class="col-md-4 col-sm-6 mb-2 py-3">
+            <div class="card border-0 shadow-sm">
+                <h3 class="widget-title text-center">Top rated</h3>
+                <div class="d-flex align-items-center pb-2 border-bottom"><a class="d-block flex-shrink-0"
+                        href="shop-single-v2.html"><img src="img/suggest/10.jpg" width="64" alt="Product"></a>
+                    <div class="ps-2">
+                        <h6 class="widget-product-title"><a href="shop-single-v2.html">Android Smartphone S9</a></h6>
+                        <div class="widget-product-meta"><span class="text-accent">$749.<small>99</small></span>
+                            <del class="text-muted fs-xs">$859.<small>99</small></del>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="d-flex align-items-center py-2 border-bottom"><a class="d-block flex-shrink-0"
-                    href="shop-single-v2.html"><img src="img/suggest/11.jpg" width="64" alt="Product"></a>
-                <div class="ps-2">
-                    <h6 class="widget-product-title"><a href="shop-single-v2.html">Wireless Bluetooth Headphones</a>
-                    </h6>
-                    <div class="widget-product-meta"><span class="text-accent">$428.<small>60</small></span></div>
-                </div>
-            </div>
-            <div class="d-flex align-items-center py-2 border-bottom"><a class="d-block flex-shrink-0"
-                    href="shop-single-v2.html"><img src="img/suggest/12.jpg" width="64" alt="Product"></a>
-                <div class="ps-2">
-                    <h6 class="widget-product-title"><a href="shop-single-v2.html">360 Degrees Camera</a></h6>
-                    <div class="widget-product-meta"><span class="text-accent">$98.<small>75</small></span></div>
-                </div>
-            </div>
-            <div class="d-flex align-items-center py-2"><a class="d-block flex-shrink-0" href="shop-single-v2.html"><img
-                        src="img/suggest/13.jpg" width="64" alt="Product"></a>
-                <div class="ps-2">
-                    <h6 class="widget-product-title"><a href="shop-single-v2.html">Digital Camera 40MP</a></h6>
-                    <div class="widget-product-meta"><span class="text-accent">$210.<small>00</small></span>
-                        <del class="text-muted fs-xs">$249.<small>00</small></del>
+                <div class="d-flex align-items-center py-2 border-bottom"><a class="d-block flex-shrink-0"
+                        href="shop-single-v2.html"><img src="img/suggest/11.jpg" width="64" alt="Product"></a>
+                    <div class="ps-2">
+                        <h6 class="widget-product-title"><a href="shop-single-v2.html">Wireless Bluetooth Headphones</a>
+                        </h6>
+                        <div class="widget-product-meta"><span class="text-accent">$428.<small>60</small></span></div>
                     </div>
                 </div>
+                <div class="d-flex align-items-center py-2 border-bottom"><a class="d-block flex-shrink-0"
+                        href="shop-single-v2.html"><img src="img/suggest/12.jpg" width="64" alt="Product"></a>
+                    <div class="ps-2">
+                        <h6 class="widget-product-title"><a href="shop-single-v2.html">360 Degrees Camera</a></h6>
+                        <div class="widget-product-meta"><span class="text-accent">$98.<small>75</small></span></div>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center py-2"><a class="d-block flex-shrink-0"
+                        href="shop-single-v2.html"><img src="img/suggest/13.jpg" width="64" alt="Product"></a>
+                    <div class="ps-2">
+                        <h6 class="widget-product-title"><a href="shop-single-v2.html">Digital Camera 40MP</a></h6>
+                        <div class="widget-product-meta"><span class="text-accent">$210.<small>00</small></span>
+                            <del class="text-muted fs-xs">$249.<small>00</small></del>
+                        </div>
+                    </div>
+                </div>
+                <a class="btn btn-outline-primary fs-sm" href="shop-grid-ls.html">View more<i
+                        class="icofont-simple-right"></i></a>
             </div>
-            <a class="btn btn-outline-primary fs-sm" href="shop-grid-ls.html">View more<i
-                    class="icofont-simple-right"></i></a>
         </div>
-    </div>
     </div>
 </section>
 
