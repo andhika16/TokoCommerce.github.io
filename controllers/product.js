@@ -40,8 +40,15 @@ const fakeStoreApi = async (limit = 0, category = '') => { // * Create Function 
 // ? masih dalam pengembangan
 const fashionApi = async function (req, res) {
 
+    const response = await fetch('https://api.spoonacular.com/food/products/22348');
+    const data = await response.json();
+    
 
-  
+    console.log(data);
+
+
+
+
     const images = imageRender('public/img/fashion')
 
     res.render('fashion', {
